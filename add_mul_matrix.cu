@@ -23,7 +23,7 @@ void addCPU(int *a,int *b, int *c, int *d, int N){
 
 
 int main() {
-    int N = 50000;
+    int N = 5000;
 
     int nBytes = N*N*sizeof(int);
     //Block size and number
@@ -35,7 +35,7 @@ int main() {
     hc = (int *) malloc(nBytes);
     hd = (int *) malloc(nBytes);
 
-    block_size = 8; //threads per block
+    block_size = 100; //threads per block
     block_no = N*N/block_size;
 
     //Work definition
